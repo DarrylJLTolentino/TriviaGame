@@ -1,5 +1,7 @@
-var timer = 15;
+var timer = 6;
 var questionCount = 0;
+var intervalVar;
+var timerRunning = false;
 var questionAnswered = false;
 
 var correctAnswers = ["white", "sphere"];
@@ -15,7 +17,28 @@ function startUpTrivia() {
     $("#answer2").text(questions[questionCount].a2);
     $("#answer3").text(questions[questionCount].a3);
     $("#answer4").text(questions[questionCount].a4);
+    startTimer();
+    timeRemaining();
+}
 
+function startTimer() {
+    if (!timerRunning) {
+
+        timerRunning = true;
+
+        intervalVar = setInterval(timeRemaining, 1000);
+
+    }
+
+}
+
+function timeRemaining() {
+    timer--;
+    $("#timer").html("Time remaining: " + timer);
+    if (timer === 0) {
+        timerRunning = false;
+        clearInterval(intervalVar);
+    }
 }
 
 startUpTrivia();
