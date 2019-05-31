@@ -19,10 +19,16 @@ var questionAnswered = false;
 
 function startUpTrivia() {
     $("#question").text("Question: " + questions[questionCount].q);
+    answer1 = questions[questionCount].a1;
+    answer2 = questions[questionCount].a2;
+    answer3 = questions[questionCount].a3;
+    answer4 = questions[questionCount].a4;
     $("#answer1").text(answer1);
     $("#answer2").text(answer2);
     $("#answer3").text(answer3);
     $("#answer4").text(answer4);
+    $("#results").text("Results: ");
+    timer = 6;
     startTimer();
     timeRemaining();
 }
@@ -45,6 +51,8 @@ function timeRemaining() {
         timerRunning = false;
         clearInterval(intervalVar);
         checkingAnswer();
+        questionCount++
+        setTimeout(startUpTrivia, 3000);
     }
 }
 
@@ -57,7 +65,7 @@ function checkingAnswer() {
         if (answerChosen === "nothing") {
             $("#results").html("Results: Time's up! <br>");
             $("#results").append("The correct answer is " + correctAnswers[questionCount] + ".");
-            
+
         }
         else {
             $("#results").html("Results: You are incorrect! <br>");
@@ -84,6 +92,8 @@ $(".answer").on("click", function () {
     timerRunning = false;
     clearInterval(intervalVar);
     checkingAnswer();
+    questionCount++
+    setTimeout(startUpTrivia, 3000);
 })
 
 startUpTrivia();
