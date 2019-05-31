@@ -77,6 +77,8 @@ function checkingAnswer() {
 
 $(".answer").on("click", function () {
     answerChosen = this.value;
+    console.log(this);  
+    console.log(this.value);
     if (answerChosen === "1") {
         answerChosen = answer1;
     }
@@ -89,6 +91,7 @@ $(".answer").on("click", function () {
     if (answerChosen === "4") {
         answerChosen = answer4;
     }
+    console.log(answerChosen)
     timerRunning = false;
     clearInterval(intervalVar);
     checkingAnswer();
