@@ -22,6 +22,12 @@ body {
     border: 1px solid white;
 }
 
+#results-card { 
+    background-color: black;
+    height: 100%;
+    border: 1px solid white;
+}
+
 .card-title {
     margin-top: 26.5%;
 }
