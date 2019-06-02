@@ -1,3 +1,15 @@
 body {
+    background-color: black;
+}
+
+.jumbotron {
     background-image: url(../images/yugioh-background.jpg);
+    vertical-align: middle;
+    margin-top: 50px;
+    color: rgb(247, 86, 86);
+}
+
+.card {
+    opacity: 0.9;
+    background-color: black;
 }
