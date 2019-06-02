@@ -39,7 +39,7 @@ function startUpTrivia() {
     $("#card3").css("background-image", "none");
     $("#card4").css("background-image", "none");
     cardID = idArray[questionCount];
-    timer = 6;
+    timer = 16;
     startTimer();
     timeRemaining();
 }

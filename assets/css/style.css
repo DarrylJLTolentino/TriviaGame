@@ -6,14 +6,22 @@ body {
     background-image: url(../images/yugioh-background.jpg);
     vertical-align: middle;
     margin-top: 50px;
-    color: rgb(247, 86, 86);
+    color: firebrick;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
-.card {
+#question-card {
     background-color: black;
-    height: 400px;
+    height: 80px;
+}
+
+.cards {
+    background-color: black;
+    height: 300px;
+    border: 1px solid white;
 }
 
 .card-title {
-    margin-top: 40%;
+    margin-top: 26.5%;
 }
