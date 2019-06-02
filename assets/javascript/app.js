@@ -34,6 +34,10 @@ function startUpTrivia() {
         $("#results").append("Timed Out Questions: " + timedOutQuestions + "<br>");
         $("#results").append("Hit the reset button to try again!" + "<br>");
         //Have to get button to show here.
+        $("#reset").removeClass("d-none");
+        $(".cards").addClass("d-none");
+        $("#question-card").addClass("d-none");
+        $("#timer").addClass("d-none");
     }
     else {
         $("#question").text(questions[questionCount].q);
@@ -42,6 +46,10 @@ function startUpTrivia() {
         answer3 = questions[questionCount].a3;
         answer4 = questions[questionCount].a4;
         isShowingAnswer = false;
+        $("#reset").addClass("d-none");
+        $(".cards").removeClass("d-none");
+        $("#question-card").removeClass("d-none");
+        $("#timer").removeClass("d-none");
         $("#answer1").text(answer1);
         $("#answer2").text(answer2);
         $("#answer3").text(answer3);
