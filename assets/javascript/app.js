@@ -1,4 +1,4 @@
-var timer = 6;
+var timer;
 var questionCount = 0;
 var incorrectQuestions = 0;
 var correctQuestions = 0;
@@ -28,7 +28,7 @@ function startUpTrivia() {
     $("#answer3").text(answer3);
     $("#answer4").text(answer4);
     $("#results").text("Results: ");
-    timer = 6;
+    timer = 16;
     startTimer();
     timeRemaining();
 }
@@ -77,8 +77,6 @@ function checkingAnswer() {
 
 $(".answer").on("click", function () {
     answerChosen = this.value;
-    console.log(this);  
-    console.log(this.value);
     if (answerChosen === "1") {
         answerChosen = answer1;
     }
