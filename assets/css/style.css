@@ -22,7 +22,7 @@ body {
     border: 1px solid white;
 }
 
-#results-card { 
+#timer-card, #results-card { 
     background-color: black;
     height: 100%;
     border: 1px solid white;

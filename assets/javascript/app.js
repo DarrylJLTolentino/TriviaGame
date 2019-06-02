@@ -37,7 +37,8 @@ function startUpTrivia() {
         $("#reset").removeClass("d-none");
         $(".cards").addClass("d-none");
         $("#question-card").addClass("d-none");
-        $("#timer").addClass("d-none");
+        $("#timer-card").addClass("d-none");
+        $(".line").addClass("d-none");
     }
     else {
         $("#question").text(questions[questionCount].q);
@@ -49,7 +50,8 @@ function startUpTrivia() {
         $("#reset").addClass("d-none");
         $(".cards").removeClass("d-none");
         $("#question-card").removeClass("d-none");
-        $("#timer").removeClass("d-none");
+        $("#timer-card").removeClass("d-none");
+        $(".line").removeClass("d-none");
         $("#answer1").text(answer1);
         $("#answer2").text(answer2);
         $("#answer3").text(answer3);

@@ -14,17 +14,21 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center vertical-center">
+    <div class="jumbotron text-center">
         <h1 class="display-4">Trivia Game!</h1>
-        <!-- <hr class="my-4"> -->
-        <p id="timer">Time Remaining: </p>
-        <hr class="my-4">
+        <hr class="my-4 line">
+        <div class="card">
+            <div class="card-body" id="timer-card">
+                <p id="timer">Time Remaining: </p>
+            </div>
+        </div>
+        <hr class="my-4 line">
         <div class="card">
             <div class="card-body" id="question-card">
                 <p id="question"></p>
             </div>
         </div>
-        <hr class="my-4">
+        <hr class="my-4 line">
         <div class="card-deck">
             <div class="card cards">
                 <div class="card-body" id="card1">
@@ -52,10 +56,10 @@
             </div>
         </div>
         <hr class="my-4">
-        <div class="card" id = "results-card">
+        <div class="card" id="results-card">
             <div class="card-body">
                 <p id="results">Results: </p>
-                <button class="btn btn-primary d-none" id = "reset" value="4">RESET</button>
+                <button class="btn btn-primary d-none" id="reset" value="4">RESET</button>
             </div>
         </div>
     </div>
