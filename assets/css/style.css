@@ -13,13 +13,18 @@ body {
 
 #question-card {
     background-color: black;
-    height: 80px;
+    height: 100%;
 }
 
 .cards {
     background-color: black;
     height: 300px;
     border: 1px solid white;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
 }
 
 #timer-card, #results-card { 

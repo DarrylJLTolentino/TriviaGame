@@ -47,6 +47,7 @@ function startUpTrivia() {
     }
     else {
         $("#question").text(questions[questionCount].q);
+        answerChosen = "nothing";
         answer1 = questions[questionCount].a1;
         answer2 = questions[questionCount].a2;
         answer3 = questions[questionCount].a3;
@@ -67,7 +68,7 @@ function startUpTrivia() {
         $("#card3").css("background-image", "none");
         $("#card4").css("background-image", "none");
         cardID = idArray[questionCount];
-        timer = 16;
+        timer = 2;
         startTimer();
         timeRemaining();
     }
@@ -94,7 +95,6 @@ function timeRemaining() {
         checkingAnswer();
         imageChanger(cardID, questionCount);
         questionCount++;
-        timedOutQuestions++;
         setTimeout(startUpTrivia, 3000);
     }
 }
@@ -119,12 +119,14 @@ function checkingAnswer() {
         if (answerChosen === "nothing") {
             $("#results").html("Results: Time's up! <br>");
             $("#results").append("The correct answer is " + correctAnswers[questionCount] + ".");
-
+            timedOutQuestions++;
+            console.log(timedOutQuestions);
         }
         else {
             $("#results").html("Results: You are incorrect! <br>");
             $("#results").append("The correct answer is " + correctAnswers[questionCount] + ".");
             incorrectQuestions++;
+            console.log(incorrectQuestions);
         }
     }
 }
