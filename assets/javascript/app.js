@@ -11,16 +11,16 @@ var questions = [
     { q: "Answer Yugi's riddle: What is something you can show, but can't see?", a1: "Boundaries", a2: "Emotions", a3: "Gravity", a4: "Friendship" },
     { q: "Which is Yugi Moto's most iconic monster card?", a1: "Summoned Skull", a2: "Celtic Guardian", a3: "Dark Magician", a4: "Kuriboh" },
     { q: "What type of card is Stardust Dragon?", a1: "Synchro Monster", a2: "Magic Card", a3: "Trap Card", a4: "Fusion Monster" },
-    { q: "Which of the following is not an Egyptian God card?", a1: "Obelisk The Tormentor", a2: "Mysterious Beast of Serket", a3: "Winged Dragon of Ra", a4: "Slifer The Sky Dragon"},
+    { q: "Which of the following is not an Egyptian God card?", a1: "Obelisk The Tormentor", a2: "Mystical Beast of Serket", a3: "Winged Dragon of Ra", a4: "Slifer The Sky Dragon"},
     { q: "Who is Kaiba's little brother?", a1: "Mokuba", a2: "Madara", a3: "Minato", a4: "Makoto"},
     { q: "What is Pegasus' card that lets him summon his monsters?", a1: "Malefic World", a2: "Zombie World", a3: "Toon World", a4: "Clear World"},
-    { q: "What is Mai Valentine's deck archetype in the first season?", a1: "Fiends", a2: "Warriors", a3: "Spellcasters", a4: "Winged Beasts"},
+    { q: "What is Mai Valentine's deck archetype in the first season?", a1: "Fiends", a2: "Warriors", a3: "Spellcasters", a4: "Harpies"},
     { q: "What is the name of the monster that a player can win with if he/she has five specific cards in their hand?", a1: "The Creator", a2: "Gate Guardian", a3: "Black Luster Soldier", a4: "Exodia The Forbidden One" },
     { q: "End of Quiz!"}
 ];
-var correctAnswers = ["3000", "Millenium", "Friendship", "Dark Magician", "Synchro Monster", "Mysterious Beast of Serket", "Mokuba", "Toon World", "Winged Beasts", "Exodia The Forbidden One", "done!"];
-var imageArray = ["blue-eyes-white-dragon", "millenium-puzzle", "friendship", "dark-magician", "stardust-dragon"];
-var idArray = [$("#card2"), $("#card1"), $("#card4"), $("#card3"), $("#card1")];
+var correctAnswers = ["3000", "Millenium", "Friendship", "Dark Magician", "Synchro Monster", "Mystical Beast of Serket", "Mokuba", "Toon World", "Harpies", "Exodia The Forbidden One", "done!"];
+var imageArray = ["blue-eyes-white-dragon", "millenium-puzzle", "friendship", "dark-magician", "stardust-dragon", "mysticalbeastofserket", "mokuba", "toon-world", "harpie", "exodia"];
+var idArray = [$("#card2"), $("#card1"), $("#card4"), $("#card3"), $("#card1"), $("#card2"), $("#card1"), $("#card3"), $("#card4"), $("#card4")];
 var answer1 = questions[questionCount].a1;
 var answer2 = questions[questionCount].a2;
 var answer3 = questions[questionCount].a3;
