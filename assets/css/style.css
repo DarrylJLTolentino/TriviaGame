@@ -11,6 +11,11 @@ body {
     font-weight: bolder;
 }
 
+#logo {
+    height: 175px;
+    width: 500px;
+}
+
 #question-card {
     background-color: black;
     height: 100%;
