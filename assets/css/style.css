@@ -9,6 +9,7 @@ body {
     color: firebrick;
     font-size: 30px;
     font-weight: bolder;
+    height: 100vh;
 }
 
 #logo {
@@ -32,9 +33,15 @@ body {
     box-shadow: none;
 }
 
-#timer-card, #results-card { 
+#timer-card { 
     background-color: black;
     height: 100%;
+    border: 1px solid white;
+}
+
+#results-card {
+    background-color: black;
+    height: 50%;
     border: 1px solid white;
 }
 
