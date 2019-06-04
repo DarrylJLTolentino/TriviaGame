@@ -30,6 +30,7 @@ var answerChosen = "nothing";
 var timerRunning = false;
 var questionAnswered = false;
 
+
 function startUpTrivia() {
     if (questions[questionCount].q === "End of Quiz!") {
         isShowingAnswer = false;
@@ -68,7 +69,7 @@ function startUpTrivia() {
         $("#card3").css("background-image", "none");
         $("#card4").css("background-image", "none");
         cardID = idArray[questionCount];
-        timer = 2;
+        timer = 16;
         startTimer();
         timeRemaining();
     }
@@ -114,19 +115,20 @@ function checkingAnswer() {
     if (answerChosen === correctAnswers[questionCount]) {
         $("#results").html("Results: You are correct! <br>");
         correctQuestions++;
+        $("#audio2").prop("volume", 0.1);
+        $("#audio2")[0].play();
     }
     else {
         if (answerChosen === "nothing") {
             $("#results").html("Results: Time's up! <br>");
             $("#results").append("The correct answer is " + correctAnswers[questionCount] + ".");
             timedOutQuestions++;
-            console.log(timedOutQuestions);
         }
         else {
             $("#results").html("Results: You are incorrect! <br>");
             $("#results").append("The correct answer is " + correctAnswers[questionCount] + ".");
             incorrectQuestions++;
-            console.log(incorrectQuestions);
+            $("#audio1")[0].play();
         }
     }
 }
@@ -165,4 +167,9 @@ $("#reset").on("click", function () {
     startUpTrivia();
 })
 
-startUpTrivia();
+$("#start").on("click", function () {
+    $("#audio3").prop("volume", 0.1);
+    $("#audio3")[0].play();
+    $("#start").addClass("d-none");
+    startUpTrivia();
+})
