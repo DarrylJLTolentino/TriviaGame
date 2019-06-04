@@ -11,12 +11,12 @@ var questions = [
     { q: "Answer Yugi's riddle: What is something you can show, but can't see?", a1: "Boundaries", a2: "Emotions", a3: "Gravity", a4: "Friendship" },
     { q: "Which is Yugi Moto's most iconic monster card?", a1: "Summoned Skull", a2: "Celtic Guardian", a3: "Dark Magician", a4: "Kuriboh" },
     { q: "What type of card is Stardust Dragon?", a1: "Synchro Monster", a2: "Magic Card", a3: "Trap Card", a4: "Fusion Monster" },
-    { q: "Which of the following is not an Egyptian God card?", a1: "Obelisk The Tormentor", a2: "Mystical Beast of Serket", a3: "Winged Dragon of Ra", a4: "Slifer The Sky Dragon"},
-    { q: "Who is Kaiba's little brother?", a1: "Mokuba", a2: "Madara", a3: "Minato", a4: "Makoto"},
-    { q: "What is Pegasus' card that lets him summon his monsters?", a1: "Malefic World", a2: "Zombie World", a3: "Toon World", a4: "Clear World"},
-    { q: "What is Mai Valentine's deck archetype in the first season?", a1: "Fiends", a2: "Warriors", a3: "Spellcasters", a4: "Harpies"},
+    { q: "Which of the following is not an Egyptian God card?", a1: "Obelisk The Tormentor", a2: "Mystical Beast of Serket", a3: "Winged Dragon of Ra", a4: "Slifer The Sky Dragon" },
+    { q: "Who is Kaiba's little brother?", a1: "Mokuba", a2: "Madara", a3: "Minato", a4: "Makoto" },
+    { q: "What is Pegasus' card that lets him summon his monsters?", a1: "Malefic World", a2: "Zombie World", a3: "Toon World", a4: "Clear World" },
+    { q: "What is Mai Valentine's deck archetype in the first season?", a1: "Fiends", a2: "Warriors", a3: "Spellcasters", a4: "Harpies" },
     { q: "What is the name of the monster that a player can win with if he/she has five specific cards in their hand?", a1: "The Creator", a2: "Gate Guardian", a3: "Black Luster Soldier", a4: "Exodia The Forbidden One" },
-    { q: "End of Quiz!"}
+    { q: "End of Quiz!" }
 ];
 var correctAnswers = ["3000", "Millenium", "Friendship", "Dark Magician", "Synchro Monster", "Mystical Beast of Serket", "Mokuba", "Toon World", "Harpies", "Exodia The Forbidden One", "done!"];
 var imageArray = ["blue-eyes-white-dragon", "millenium-puzzle", "friendship", "dark-magician", "stardust-dragon", "mysticalbeastofserket", "mokuba", "toon-world", "harpie", "exodia"];
@@ -115,8 +115,6 @@ function checkingAnswer() {
     if (answerChosen === correctAnswers[questionCount]) {
         $("#results").html("Results: You are correct! <br>");
         correctQuestions++;
-        $("#audio2").prop("volume", 0.1);
-        $("#audio2")[0].play();
     }
     else {
         if (answerChosen === "nothing") {
@@ -128,9 +126,9 @@ function checkingAnswer() {
             $("#results").html("Results: You are incorrect! <br>");
             $("#results").append("The correct answer is " + correctAnswers[questionCount] + ".");
             incorrectQuestions++;
-            $("#audio1")[0].play();
         }
     }
+    $("#audio1")[0].play();
 }
 
 $(".answer").on("click", function () {
@@ -165,11 +163,14 @@ $("#reset").on("click", function () {
     correctQuestions = 0;
     timedOutQuestions = 0;
     startUpTrivia();
+    $("#audio2").prop("volume", 0.1);
+    $("#audio2")[0].play();
 })
 
 $("#start").on("click", function () {
-    $("#audio3").prop("volume", 0.1);
-    $("#audio3")[0].play();
     $("#start").addClass("d-none");
+    $("div").removeClass("d-none");
     startUpTrivia();
+    $("#audio2").prop("volume", 0.1);
+    $("#audio2")[0].play();
 })
